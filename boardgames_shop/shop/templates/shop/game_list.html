@@ -1,0 +1,10 @@
+<h2>Список настільних ігор</h2>
+<ul>
+    {% for game in games %}
+        <li>
+            <a href="{% url 'game_detail' game.id %}">{{ game.title }}</a> - {{ game.price }} грн
+        </li>
+    {% empty %}
+        <li>Наразі ігор немає.</li>
+    {% endfor %}
+</ul>

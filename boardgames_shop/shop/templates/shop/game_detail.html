@@ -1,0 +1,6 @@
+<h2>{{ game.title }}</h2>
+<p>{{ game.description }}</p>
+<p>Ціна: {{ game.price }} грн</p>
+{% if game.image %}
+    <img src="{{ game.image.url }}" alt="{{ game.title }}" width="300">
+{% endif %}
